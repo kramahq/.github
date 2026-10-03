@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or discussion
+    url: https://github.com/kramahq/krama/discussions
+    about: Ask questions and share ideas in Discussions.
+  - name: Report a security vulnerability
+    url: https://github.com/kramahq/.github/blob/main/SECURITY.md
+    about: Please report privately; do not open a public issue.

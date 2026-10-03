@@ -1,0 +1,24 @@
+name: Pack request
+description: Request a new pack (an agent team and methodology)
+labels: ["type: pack", "status: triage"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What should the pack deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: roles
+    attributes:
+      label: Roles, phases and gates you imagine
+  - type: textarea
+    id: tools
+    attributes:
+      label: Tools and integrations needed
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to help build this pack
