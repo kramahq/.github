@@ -1,0 +1,45 @@
+# Reusable release: changesets version PR + npm publish with trusted publishing (OIDC) and provenance.
+# No long-lived npm token. Each published package must have this workflow registered as a
+# trusted publisher on npmjs.com. Pass dry-run: true to rehearse without publishing.
+name: release
+on:
+  workflow_call:
+    inputs:
+      dry-run:
+        type: boolean
+        default: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@^11.5.1
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Dry run
+        if: ${{ inputs.dry-run }}
+        run: pnpm -r publish --dry-run --no-git-checks --access public
+      - name: Version PR or publish
+        if: ${{ !inputs.dry-run }}
+        uses: changesets/action@v1
+        with:
+          version: pnpm changeset version
+          publish: pnpm changeset publish
+          commit: "chore: version packages"
+          title: "chore: version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: "true"
