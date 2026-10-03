@@ -4,7 +4,7 @@
 
 Please **do not** open a public issue. Report privately using GitHub's
 [private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability)
-on the affected repository (Security tab → "Report a vulnerability"), or email **security@kramahq.dev**.
+on the affected repository (Security tab → "Report a vulnerability"), or email **shashikanth.gs@outlook.com**.
 
 Include the affected version, a description, reproduction steps and the impact you see.
 
