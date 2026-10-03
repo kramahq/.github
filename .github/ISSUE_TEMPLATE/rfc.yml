@@ -1,0 +1,28 @@
+name: RFC
+description: Propose a significant change (API, pack format, architecture, governance)
+labels: ["type: rfc", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: See the RFC process in [GOVERNANCE.md](https://github.com/kramahq/.github/blob/main/GOVERNANCE.md). Discussion runs at least 14 days.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and motivation
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Detailed proposal
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and migration
+      description: Compatibility, security, docs and packs affected.

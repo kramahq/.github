@@ -1,0 +1,26 @@
+name: Task
+description: A scoped unit of work (maintainers and agreed contributors)
+labels: ["type: task"]
+body:
+  - type: input
+    id: plan-id
+    attributes:
+      label: Task ID
+      placeholder: "e.g. M1.1"
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: A verifiable check.
+    validations:
+      required: true
+  - type: textarea
+    id: needs
+    attributes:
+      label: Depends on

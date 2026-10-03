@@ -1,0 +1,21 @@
+# Org label set. Apply with: gh label create <name> --color <color> --description <text> (or a label-sync tool).
+- {name: "type: bug", color: d73a4a, description: Something is broken}
+- {name: "type: feature", color: a2eeef, description: New capability}
+- {name: "type: task", color: 0e8a16, description: Scoped unit of work}
+- {name: "type: rfc", color: 5319e7, description: Significant proposal}
+- {name: "type: pack", color: 1d76db, description: Pack request or change}
+- {name: "type: docs", color: 0075ca, description: Documentation}
+- {name: "status: triage", color: fbca04, description: Needs maintainer review}
+- {name: "status: blocked", color: b60205, description: Waiting on something else}
+- {name: "status: needs-info", color: d4c5f9, description: More information requested}
+- {name: "good first issue", color: 7057ff, description: Good for newcomers}
+- {name: "help wanted", color: 008672, description: Contributions welcome}
+- {name: "breaking", color: e11d21, description: Breaking change}
+- {name: "security", color: ee0701, description: Security related}
+- {name: "area: engine", color: c5def5, description: Engine and domain}
+- {name: "area: server", color: c5def5, description: Server and API}
+- {name: "area: ui", color: c5def5, description: User interface}
+- {name: "area: cli", color: c5def5, description: CLI and packaging}
+- {name: "area: packs", color: c5def5, description: Packs and pack format}
+- {name: "area: docs", color: c5def5, description: Docs site}
+- {name: "area: ci", color: c5def5, description: CI and release}
